@@ -11,6 +11,9 @@
 		CEA801832BE101B600A19889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801822BE101B600A19889 /* ContentView.swift */; };
 		CEA801852BE101B800A19889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA801842BE101B800A19889 /* Assets.xcassets */; };
 		CEA801882BE101B800A19889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA801872BE101B800A19889 /* Preview Assets.xcassets */; };
+		CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801902BE2499F00A19889 /* ScoreView.swift */; };
+		CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801922BE24A0F00A19889 /* QuizView.swift */; };
+		CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801942BE24B5F00A19889 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		CEA801822BE101B600A19889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CEA801842BE101B800A19889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA801872BE101B800A19889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEA801902BE2499F00A19889 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		CEA801922BE24A0F00A19889 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		CEA801942BE24B5F00A19889 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,9 @@
 			children = (
 				CEA801802BE101B600A19889 /* LanguageLearningAppApp.swift */,
 				CEA801822BE101B600A19889 /* ContentView.swift */,
+				CEA801902BE2499F00A19889 /* ScoreView.swift */,
+				CEA801922BE24A0F00A19889 /* QuizView.swift */,
+				CEA801942BE24B5F00A19889 /* SettingsView.swift */,
 				CEA801842BE101B800A19889 /* Assets.xcassets */,
 				CEA801862BE101B800A19889 /* Preview Content */,
 			);
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
 				CEA801832BE101B600A19889 /* ContentView.swift in Sources */,
+				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
+				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

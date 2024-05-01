@@ -11,9 +11,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Japanese Memory App")
+            Spacer()
             Text("Play")
             Text("Alphabet")
             Text("Leaderboard")
+            Spacer()
         }
         .padding()
     }
@@ -21,6 +23,9 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        NavigationStack {
+            ContentView()
+        }
+        
     }
 }
