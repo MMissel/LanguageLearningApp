@@ -15,6 +15,8 @@
 		CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801922BE24A0F00A19889 /* QuizView.swift */; };
 		CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801942BE24B5F00A19889 /* SettingsView.swift */; };
 		CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801962BE24D7400A19889 /* AlphabetView.swift */; };
+		CEA801992BE2503900A19889 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801982BE2503900A19889 /* LetterModel.swift */; };
+		CEA8019B2BE2520800A19889 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA8019A2BE2520800A19889 /* o.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		CEA801922BE24A0F00A19889 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		CEA801942BE24B5F00A19889 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CEA801962BE24D7400A19889 /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
+		CEA801982BE2503900A19889 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
+		CEA8019A2BE2520800A19889 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = o.png; path = ../../../../../Downloads/o.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 				CEA801902BE2499F00A19889 /* ScoreView.swift */,
 				CEA801922BE24A0F00A19889 /* QuizView.swift */,
 				CEA801962BE24D7400A19889 /* AlphabetView.swift */,
+				CEA801982BE2503900A19889 /* LetterModel.swift */,
 				CEA801942BE24B5F00A19889 /* SettingsView.swift */,
 				CEA801842BE101B800A19889 /* Assets.xcassets */,
 				CEA801862BE101B800A19889 /* Preview Content */,
@@ -74,6 +79,7 @@
 		CEA801862BE101B800A19889 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				CEA8019A2BE2520800A19889 /* o.png */,
 				CEA801872BE101B800A19889 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -137,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEA8019B2BE2520800A19889 /* o.png in Resources */,
 				CEA801882BE101B800A19889 /* Preview Assets.xcassets in Resources */,
 				CEA801852BE101B800A19889 /* Assets.xcassets in Resources */,
 			);
@@ -150,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
+				CEA801992BE2503900A19889 /* LetterModel.swift in Sources */,
 				CEA801832BE101B600A19889 /* ContentView.swift in Sources */,
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
