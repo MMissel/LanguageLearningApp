@@ -13,7 +13,7 @@ struct ContentView: View {
                         Text("Quiz").padding()
                     )
             }
-            NavigationLink(destination: SettingsView()){
+            NavigationLink(destination: AlphabetView()){
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.blue, lineWidth: 2)
                     .frame(width: 200, height: 40) // Adjusted frame size
