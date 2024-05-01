@@ -10,6 +10,7 @@ import SwiftUI
 struct ScoreView: View {
     var body: some View {
         Text("Score Page")
+        Spacer()
     }
 }
 

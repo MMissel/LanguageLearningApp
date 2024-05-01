@@ -1,20 +1,34 @@
-//
-//  ContentView.swift
-//  LanguageLearningApp
-//
-//  Created by User on 30/4/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 20) { // Added spacing between views
             Text("Japanese Memory App")
             Spacer()
-            Text("Play")
-            Text("Alphabet")
-            Text("Leaderboard")
+            NavigationLink(destination: SettingsView()){
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 2)
+                    .frame(width: 200, height: 40) // Adjusted frame size
+                    .overlay(
+                        Text("Quiz").padding()
+                    )
+            }
+            NavigationLink(destination: SettingsView()){
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 2)
+                    .frame(width: 200, height: 40) // Adjusted frame size
+                    .overlay(
+                        Text("Alphabet").padding()
+                    )
+            }
+            NavigationLink(destination: ScoreView()){
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.blue, lineWidth: 2)
+                    .frame(width: 200, height: 40) // Adjusted frame size
+                    .overlay(
+                        Text("Scores").padding()
+                    )
+            }
             Spacer()
         }
         .padding()
@@ -26,6 +40,5 @@ struct ContentView_Previews: PreviewProvider {
         NavigationStack {
             ContentView()
         }
-        
     }
 }
