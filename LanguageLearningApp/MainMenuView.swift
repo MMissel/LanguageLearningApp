@@ -35,7 +35,7 @@ struct MainMenuView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainMenuView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             MainMenuView()

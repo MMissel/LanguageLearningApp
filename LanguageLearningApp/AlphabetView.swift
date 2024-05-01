@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct AlphabetView: View {
+    var letters: [letter] = letterList.KatakanaAlphabet
     var body: some View {
-        
-        VStack{
-            Text("Alphabet")
-            Spacer()
+        NavigationView{
+            List(letters, id: \.id){ letter in
+                HStack{Image(letter.imageName).resizable().scaledToFit(
+                ).frame(height:70)
+                    Text("Letter: \(letter.letterName)").fontWeight(.bold)
+                    
+                }
+                    
+            }.navigationTitle("Katakana Alphabet")
         }
+           
     }
 }
 

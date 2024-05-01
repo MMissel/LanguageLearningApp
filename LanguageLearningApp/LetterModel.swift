@@ -9,16 +9,18 @@ import Foundation
 
 //this file contains the japanese letters for the Japanese alphabet called "Katakana"
 
-struct letter {
+struct letter: Identifiable {
+    let id = UUID()
     let imageName: String
     let letterName: String
 }
 
 //this is a list of the letters
+//we will need to store this list in a core data database
 struct letterList {
-    static let KatakanaAlphabet = [letter(imageName: "a.png", letterName: "a"),
-                                   letter(imageName: "e.png", letterName: "e"),
-                                   letter(imageName: "u.png", letterName: "u"),
-                                   letter(imageName: "i.png", letterName: "i"),
-                                   letter(imageName: "o.png", letterName: "o")]
+    static let KatakanaAlphabet = [letter(imageName: "a", letterName: "a"),
+                                   letter(imageName: "e", letterName: "e"),
+                                   letter(imageName: "u", letterName: "u"),
+                                   letter(imageName: "i", letterName: "i"),
+                                   letter(imageName: "o", letterName: "o")]
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801802BE101B600A19889 /* LanguageLearningAppApp.swift */; };
-		CEA801832BE101B600A19889 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801822BE101B600A19889 /* ContentView.swift */; };
+		CEA801832BE101B600A19889 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801822BE101B600A19889 /* MainMenuView.swift */; };
 		CEA801852BE101B800A19889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA801842BE101B800A19889 /* Assets.xcassets */; };
 		CEA801882BE101B800A19889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA801872BE101B800A19889 /* Preview Assets.xcassets */; };
 		CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801902BE2499F00A19889 /* ScoreView.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		CEA8017D2BE101B600A19889 /* LanguageLearningApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LanguageLearningApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA801802BE101B600A19889 /* LanguageLearningAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageLearningAppApp.swift; sourceTree = "<group>"; };
-		CEA801822BE101B600A19889 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEA801822BE101B600A19889 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
 		CEA801842BE101B800A19889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA801872BE101B800A19889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CEA801902BE2499F00A19889 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA801802BE101B600A19889 /* LanguageLearningAppApp.swift */,
-				CEA801822BE101B600A19889 /* ContentView.swift */,
+				CEA801822BE101B600A19889 /* MainMenuView.swift */,
 				CEA801902BE2499F00A19889 /* ScoreView.swift */,
 				CEA801922BE24A0F00A19889 /* QuizView.swift */,
 				CEA801962BE24D7400A19889 /* AlphabetView.swift */,
@@ -158,7 +158,7 @@
 			files = (
 				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
 				CEA801992BE2503900A19889 /* LetterModel.swift in Sources */,
-				CEA801832BE101B600A19889 /* ContentView.swift in Sources */,
+				CEA801832BE101B600A19889 /* MainMenuView.swift in Sources */,
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
