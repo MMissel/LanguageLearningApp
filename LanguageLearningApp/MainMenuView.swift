@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    var body: some View {
+        var body: some View {
         VStack(spacing: 20) { // Added spacing between views
             Text("Japanese Memory App")
             Spacer()

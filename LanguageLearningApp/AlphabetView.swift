@@ -6,23 +6,28 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct AlphabetView: View {
-    var letters: [letter] = letterList.KatakanaAlphabet
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var letters: FetchedResults<Letter>
     var body: some View {
-        NavigationView{
-            List(letters, id: \.id){ letter in
-                HStack{Image(letter.imageName).resizable().scaledToFit(
-                ).frame(height:70)
-                    Text("Letter: \(letter.letterName)").fontWeight(.bold)
-                    
-                }
-                    
-            }.navigationTitle("Katakana Alphabet")
+        VStack {
+            Text("AlphabetView")
+            List(letters) { letter in
+                Text(letter.name ?? "Unknown")
+            }
+            Button("Add") {
+                let letter = Letter(context: moc)
+                letter.id = UUID()
+                letter.name = "Hello from AlphabetView"
+                try? moc.save()
+            }
         }
-           
+        .padding()
     }
 }
+
 
 struct AlphabetView_Previews: PreviewProvider {
     static var previews: some View {
