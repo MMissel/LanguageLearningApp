@@ -11,13 +11,11 @@ import SwiftUI
 struct LanguageLearningAppApp: App {
     //here we create a data controller that can be used anywhere in the app
     //lets us access data in the database.
-    @StateObject private var dataController = DataController()
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 MainMenuView()
                     }
-            .environment(\.managedObjectContext, dataController.container.viewContext)
         }
     }
 }

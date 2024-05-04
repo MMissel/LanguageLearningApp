@@ -17,8 +17,6 @@
 		CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801962BE24D7400A19889 /* AlphabetView.swift */; };
 		CEA801992BE2503900A19889 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801982BE2503900A19889 /* LetterModel.swift */; };
 		CEA8019B2BE2520800A19889 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA8019A2BE2520800A19889 /* o.png */; };
-		CEA801A12BE4EA9E00A19889 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801A02BE4EA9E00A19889 /* DataController.swift */; };
-		CEA801C92BE5ABC000A19889 /* JapaneseLetters.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C72BE5ABC000A19889 /* JapaneseLetters.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +31,6 @@
 		CEA801962BE24D7400A19889 /* AlphabetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetView.swift; sourceTree = "<group>"; };
 		CEA801982BE2503900A19889 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		CEA8019A2BE2520800A19889 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = o.png; path = ../../../../../Downloads/o.png; sourceTree = "<group>"; };
-		CEA801A02BE4EA9E00A19889 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		CEA801C82BE5ABC000A19889 /* JapaneseLetters.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JapaneseLetters.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				CEA801802BE101B600A19889 /* LanguageLearningAppApp.swift */,
-				CEA801C72BE5ABC000A19889 /* JapaneseLetters.xcdatamodeld */,
 				CEA801822BE101B600A19889 /* MainMenuView.swift */,
-				CEA801902BE2499F00A19889 /* ScoreView.swift */,
 				CEA801922BE24A0F00A19889 /* QuizView.swift */,
+				CEA801902BE2499F00A19889 /* ScoreView.swift */,
 				CEA801962BE24D7400A19889 /* AlphabetView.swift */,
-				CEA801982BE2503900A19889 /* LetterModel.swift */,
-				CEA801A02BE4EA9E00A19889 /* DataController.swift */,
 				CEA801942BE24B5F00A19889 /* SettingsView.swift */,
+				CEA801982BE2503900A19889 /* LetterModel.swift */,
 				CEA801842BE101B800A19889 /* Assets.xcassets */,
 				CEA801862BE101B800A19889 /* Preview Content */,
 			);
@@ -164,9 +158,7 @@
 			files = (
 				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
 				CEA801992BE2503900A19889 /* LetterModel.swift in Sources */,
-				CEA801C92BE5ABC000A19889 /* JapaneseLetters.xcdatamodeld in Sources */,
 				CEA801832BE101B600A19889 /* MainMenuView.swift in Sources */,
-				CEA801A12BE4EA9E00A19889 /* DataController.swift in Sources */,
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
@@ -369,19 +361,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		CEA801C72BE5ABC000A19889 /* JapaneseLetters.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				CEA801C82BE5ABC000A19889 /* JapaneseLetters.xcdatamodel */,
-			);
-			currentVersion = CEA801C82BE5ABC000A19889 /* JapaneseLetters.xcdatamodel */;
-			path = JapaneseLetters.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = CEA801752BE101B600A19889 /* Project object */;
 }

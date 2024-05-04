@@ -17,7 +17,10 @@ struct letter: Identifiable {
 
 //this is a list of the letters
 //we will need to store this list in a core data database
-struct letterList {
+class letterList: ObservableObject {
+    
+    @Published var defaultLetter = letter(imageName: "icons8-katakana-a-100", letterName: "a")
+    
     static let KatakanaAlphabet = [
         letter(imageName: "icons8-katakana-a-100", letterName: "a"),
         letter(imageName: "icons8-katakana-e-100", letterName: "e"),
@@ -67,4 +70,25 @@ struct letterList {
         letter(imageName: "icons8-katakana-n-100", letterName: "n")
 
     ]
+    
+    func randomLetter() -> letter {
+        defaultLetter = letterList.KatakanaAlphabet.randomElement() ?? defaultLetter
+        print("\(defaultLetter.imageName)")
+        return defaultLetter
+    }
+    
+    func isChosenLetterCorrect(chosenLetter: String, currentLetter: String) -> Bool {
+        // Compare the chosen letter with some condition and return true or false accordingly
+        if chosenLetter == currentLetter{
+            print ("Chosen passed through letter is: \(chosenLetter)")
+        }else {
+            print("Incorrect")
+            return false
+        }
+        return true
+    }
+
+    
 }
+
+
