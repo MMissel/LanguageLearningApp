@@ -10,6 +10,7 @@ import SwiftUI
 //This is the page where the gameplay will take place
 struct QuizView: View {
     @State var currentLetter = "Blank"
+    @State var letterOptions: [letter] = []
     @ObservedObject var letterListModel = letterList()
 
     var body: some View {
@@ -27,24 +28,24 @@ struct QuizView: View {
                 }
                 Spacer()
                 HStack{
-                    Text("Option 1").padding()
+                    Text("\(letterOptions[0].letterName)").padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 2)
                         )
-                    Text("Option 2").padding()
+                    Text("\(letterOptions[1].letterName)").padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 2)
                         )
                 }
                 HStack{
-                    Text("Option 3").padding()
+                    Text("\(letterOptions[2].letterName)").padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 2)
                         )
-                    Text("Option 4").padding()
+                    Text("\(letterOptions[3].letterName)").padding()
                         .overlay(
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 2)
@@ -55,12 +56,27 @@ struct QuizView: View {
             }.padding(50)
                 .onAppear{
                     currentLetter = letterListModel.randomLetter().imageName
+                    letterListModel.randomLetters()
+                    letterOptions = letterListModel.existingLetters
                     print("on appear code executed")
+                    print("Element 1 \(letterOptions[0].letterName)")
+                    print("Element 2 \(letterOptions[1].letterName)")
+                    print("Element 3 \(letterOptions[2].letterName)")
+                    print("Element 4 \(letterOptions[3].letterName)")
+
                 }
             
             Spacer()
             Button("Random Letter"){
                 currentLetter = letterListModel.randomLetter().imageName
+                letterListModel.randomLetters()
+                letterOptions = letterListModel.existingLetters
+                print("on appear code executed")
+                print("Element 1 \(letterOptions[0].letterName)")
+                print("Element 2 \(letterOptions[1].letterName)")
+                print("Element 3 \(letterOptions[2].letterName)")
+                print("Element 4 \(letterOptions[3].letterName)")
+
             }.padding(50)
         }
     }
