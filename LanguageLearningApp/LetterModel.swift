@@ -107,6 +107,19 @@ class letterList: ObservableObject {
         existingLetters.shuffle()
     }
     
+    func isChosenCorrect(chosenLetter: String) -> Bool{
+        print("current letter is \(defaultLetter.letterName)")
+        print("chosen letter is \(chosenLetter)")
+        if chosenLetter == defaultLetter.letterName{
+            
+            print("isChosenCorrect returned true")
+            return true
+        }else {
+            print("isChosenCorrect returned false")
+            return false
+        }
+    }
+    
     
 }
 
