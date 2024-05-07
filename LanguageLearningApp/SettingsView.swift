@@ -14,9 +14,12 @@ struct SettingsView: View {
     @State var numberOfLetters: Double = 23
     //will hold the default number of letters to pass between views
     @AppStorage("LETTER_COUNT_KEY") var maxLetterCount: Double = 0
+    //so we can set the score to 0 before restarting the quiz
+    @AppStorage("SCORE_KEY") var quizScore: Int = 0
+
     var body: some View {
         VStack(spacing: 20) { // Added spacing between views
-            Text("Quiz Preferences")
+            Text("Quiz Preferences").font(.title).foregroundColor(.red)
             Spacer()
             Text("Number of letters: \(Int(numberOfLetters))")
             Slider(value: $numberOfLetters, in: 1...46, step: 1).padding()
@@ -33,6 +36,7 @@ struct SettingsView: View {
         .padding()
         .onDisappear{
             maxLetterCount = numberOfLetters
+            quizScore = 0
         }
     }
     

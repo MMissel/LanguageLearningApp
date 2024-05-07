@@ -13,7 +13,7 @@ struct AlphabetView: View {
     var body: some View {
         VStack{
             Text("Letter list")
-                .font(.system(size: 30))
+                .font(.title).foregroundColor(.red)
             List(letterList.KatakanaAlphabet) { letter in
                 HStack{
                     Text("\(letter.letterName)")

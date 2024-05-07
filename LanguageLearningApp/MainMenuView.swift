@@ -1,9 +1,10 @@
 import SwiftUI
 
+
 struct MainMenuView: View {
         var body: some View {
         VStack(spacing: 20) { // Added spacing between views
-            Text("Japanese Memory App Moe's branch")
+            Text("Japanese Memory App").font(.title).foregroundColor(.red)
             Spacer()
             NavigationLink(destination: SettingsView()){
                 RoundedRectangle(cornerRadius: 10)

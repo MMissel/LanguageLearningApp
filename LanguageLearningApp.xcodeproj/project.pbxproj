@@ -18,6 +18,7 @@
 		CEA801992BE2503900A19889 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801982BE2503900A19889 /* LetterModel.swift */; };
 		CEA8019B2BE2520800A19889 /* o.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA8019A2BE2520800A19889 /* o.png */; };
 		CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801CC2BEA1D7100A19889 /* GameOverView.swift */; };
+		CEA801CF2BEA2E5600A19889 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		CEA801982BE2503900A19889 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		CEA8019A2BE2520800A19889 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = o.png; path = ../../../../../Downloads/o.png; sourceTree = "<group>"; };
 		CEA801CC2BEA1D7100A19889 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				CEA801922BE24A0F00A19889 /* QuizView.swift */,
 				CEA801CC2BEA1D7100A19889 /* GameOverView.swift */,
 				CEA801902BE2499F00A19889 /* ScoreView.swift */,
+				CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */,
 				CEA801962BE24D7400A19889 /* AlphabetView.swift */,
 				CEA801942BE24B5F00A19889 /* SettingsView.swift */,
 				CEA801982BE2503900A19889 /* LetterModel.swift */,
@@ -165,6 +168,7 @@
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
+				CEA801CF2BEA2E5600A19889 /* ScoreViewModel.swift in Sources */,
 				CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */,
 				CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */,
 			);

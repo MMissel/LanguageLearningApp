@@ -23,6 +23,8 @@ class letterList: ObservableObject {
     //this array stores 4 letters
     //these letters are displayed as the options in the quiz
     @Published var existingLetters: [letter] = []
+    //keeps the score
+    
     
     static let KatakanaAlphabet = [
         letter(imageName: "icons8-katakana-a-100", letterName: "a"),
@@ -111,8 +113,7 @@ class letterList: ObservableObject {
         print("current letter is \(defaultLetter.letterName)")
         print("chosen letter is \(chosenLetter)")
         if chosenLetter == defaultLetter.letterName{
-            
-            print("isChosenCorrect returned true")
+                        print("isChosenCorrect returned true")
             return true
         }else {
             print("isChosenCorrect returned false")
