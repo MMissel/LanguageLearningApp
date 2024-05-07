@@ -18,8 +18,11 @@ struct letter: Identifiable {
 //this is a list of the letters
 //we will need to store this list in a core data database
 class letterList: ObservableObject {
-    
+    //a default letter that is initialised first
     @Published var defaultLetter = letter(imageName: "icons8-katakana-a-100", letterName: "a")
+    //this array stores 4 letters
+    //these letters are displayed as the options in the quiz
+    @Published var existingLetters: [letter] = []
     
     static let KatakanaAlphabet = [
         letter(imageName: "icons8-katakana-a-100", letterName: "a"),
@@ -68,7 +71,7 @@ class letterList: ObservableObject {
         letter(imageName: "icons8-katakana-wa-100", letterName: "wa"),
         letter(imageName: "icons8-katakana-wo-100", letterName: "wo"),
         letter(imageName: "icons8-katakana-n-100", letterName: "n")
-
+        
     ]
     
     func randomLetter() -> letter {
@@ -78,7 +81,7 @@ class letterList: ObservableObject {
     }
     
     func isChosenLetterCorrect(chosenLetter: String, currentLetter: String) -> Bool {
-        // Compare the chosen letter with some condition and return true or false accordingly
+        //compare the chosen letter with some condition and return true or false accordingly
         if chosenLetter == currentLetter{
             print ("Chosen passed through letter is: \(chosenLetter)")
         }else {
@@ -87,7 +90,36 @@ class letterList: ObservableObject {
         }
         return true
     }
-
+    //generates random letters to show as the potential options in the quiz
+    func randomLetters(){
+        //temporary array to store the random letters
+        var randomLetters: [letter] = []
+        for _ in 0..<3 { //generate three random letters
+            if let randomLetter = letterList.KatakanaAlphabet.randomElement() {
+                randomLetters.append(randomLetter)
+            }
+        }
+        existingLetters.removeAll()
+        existingLetters += randomLetters //append the randomly generated letters to the existing array
+        //add the correct letter answer
+        print("Adding letter \(defaultLetter.letterName)")
+        existingLetters.append(defaultLetter)
+        existingLetters.shuffle()
+    }
+    
+    func isChosenCorrect(chosenLetter: String) -> Bool{
+        print("current letter is \(defaultLetter.letterName)")
+        print("chosen letter is \(chosenLetter)")
+        if chosenLetter == defaultLetter.letterName{
+            
+            print("isChosenCorrect returned true")
+            return true
+        }else {
+            print("isChosenCorrect returned false")
+            return false
+        }
+    }
+    
     
 }
 
