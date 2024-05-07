@@ -21,10 +21,11 @@ struct QuizView: View {
     //counts which question the player is up to
     @State var questionCounter = 1
     @State var questionCount = 5
+    @AppStorage("LETTER_COUNT_KEY") var maxLetterCount: Double = 0
 
     var body: some View {
         //when the final question is reached, we will go to the game over page
-        if questionCounter == questionCount + 1 {
+        if questionCounter == Int(maxLetterCount) + 1 {
             GameOverView()
         } else{
             VStack{
@@ -32,7 +33,8 @@ struct QuizView: View {
                     //player's name
                     Text("Player: Bob").padding(30)
                     //display the current question and how many left
-                    Text("Question: \(questionCounter)/46").padding(30)
+                    Text("Question: \(questionCounter)/\(Int(maxLetterCount))").padding(30)
+                  
                 }
                 VStack{
                     if let currentLetterExists = currentLetter {
@@ -177,7 +179,7 @@ struct QuizView: View {
                 
                 Spacer()
                 if hasAnswered == true {
-                    Button("Next letter"){
+                    Button("Next"){
                         currentLetter = letterListModel.randomLetter().imageName
                         letterListModel.randomLetters()
                         letterOptions = letterListModel.existingLetters
@@ -192,7 +194,7 @@ struct QuizView: View {
                     }.padding(50)
                 }else{
                     Button(action: {}) {
-                        Text("Next letter")
+                        Text("Next")
                             .foregroundColor(.white)
                     }.padding(50)
                 }
