@@ -9,7 +9,7 @@ import SwiftUI
 
 //This is the page where the gameplay will take place
 struct QuizView: View {
-    @State var currentLetter = "Blank"
+    @State var currentLetter: String?
     //to store the letters which are going to be the options
     @State var letterOptions: [letter] = []
     //letter list of characters grabbed from the letterList class
