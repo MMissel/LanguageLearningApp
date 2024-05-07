@@ -185,7 +185,10 @@ struct QuizView: View {
                     questionCounter += 1
                 }.padding(50)
             }else{
-                Text("")
+                Button(action: {}) {
+                    Text("Next letter")
+                        .foregroundColor(.white)
+                }.padding(50)
             }
          
         }
