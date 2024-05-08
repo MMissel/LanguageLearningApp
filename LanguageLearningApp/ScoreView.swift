@@ -1,10 +1,9 @@
 import SwiftUI
-//sorry for the messy code
-//define a Codable struct to represent the tuple
+
+// Define a Codable struct to represent the tuple
 struct MyTuple: Codable {
     let scoreValue: String
     let stringValue: String
-    
 }
 
 struct ScoreView: View {
@@ -12,15 +11,21 @@ struct ScoreView: View {
     
     var body: some View {
         VStack {
-            Text("Quiz History").font(.title).foregroundColor(.red)
+            Text("Quiz History").padding(70).foregroundColor(.brown).bold()
+                .font(.title)
+            
             List(viewModel.tuples, id: \.scoreValue) { tuple in
                 VStack{
-                    Text("\(tuple.stringValue) - \(tuple.scoreValue)").foregroundColor(.red)
+                    Text("\(tuple.stringValue) - \(tuple.scoreValue)")
+                        .foregroundColor(.brown).bold()
+
                 }
-                
-            }
+                .listRowBackground(Color.yellow.opacity(0.29))
+            }.background(Color.yellow.opacity(0.29))
             .padding()
         }
+        .background(Color.yellow.opacity(0.29)) // Set overall background color
+        .edgesIgnoringSafeArea(.all) // Ignore safe area to fill the entire screen
     }
 }
 

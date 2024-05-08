@@ -77,8 +77,10 @@ class letterList: ObservableObject {
     ]
     
     func randomLetter() -> letter {
-        defaultLetter = letterList.KatakanaAlphabet.randomElement() ?? defaultLetter
-        print("\(defaultLetter.imageName)")
+        if let newLetter = letterList.KatakanaAlphabet.randomElement(){
+            defaultLetter = newLetter
+        }
+        print("New letter displayed on the screen is \(defaultLetter.letterName)")
         return defaultLetter
     }
     

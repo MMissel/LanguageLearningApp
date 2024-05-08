@@ -18,26 +18,30 @@ struct SettingsView: View {
     @AppStorage("SCORE_KEY") var quizScore: Int = 0
 
     var body: some View {
-        VStack(spacing: 20) { // Added spacing between views
-            Text("Quiz Preferences").font(.title).foregroundColor(.red)
-            Spacer()
-            Text("Number of letters: \(Int(numberOfLetters))")
-            Slider(value: $numberOfLetters, in: 1...46, step: 1).padding()
-            NavigationLink(destination: QuizView().navigationBarBackButtonHidden(true)){
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.blue, lineWidth: 2)
-                    .frame(width: 200, height: 40) // Adjusted frame size
-                    .overlay(
-                        Text("Begin").padding()
-                    )
+        ZStack{
+            Color.yellow.opacity(0.29)
+            VStack(spacing: 20) { // Added spacing between views
+                Text("Quiz Preferences").font(.title).foregroundColor(.brown).bold().padding(50)
+                Spacer()
+                Text("Number of letters: \(Int(numberOfLetters))").foregroundColor(.brown).bold()
+                Slider(value: $numberOfLetters, in: 1...46, step: 1).padding()
+                NavigationLink(destination: QuizView().navigationBarBackButtonHidden(true)){
+                    RoundedRectangle(cornerRadius: 10)
+                        .fill(Color.brown) // Fill the button with brown color
+                        .frame(width: 200, height: 60) // Adjusted frame size
+                        .overlay(
+                            Text("BEGIN").padding().foregroundColor(.black.opacity(0.6)).font(.system(size: 26)).bold() // Set text color to yellow
+                        )
+                }
+                Spacer()
             }
-            Spacer()
-        }
-        .padding()
-        .onDisappear{
-            maxLetterCount = numberOfLetters
-            quizScore = 0
-        }
+            .padding()
+            .onDisappear{
+                maxLetterCount = numberOfLetters
+                quizScore = 0
+            }
+        }.ignoresSafeArea()
+       
     }
     
 }
