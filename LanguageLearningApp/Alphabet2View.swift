@@ -8,7 +8,7 @@ struct Alphabet2View: View {
         VStack{
             Text("HIRAGANA").foregroundColor(.brown).bold()
                 .font(.title)
-            List(letterList.KatakanaAlphabet) { letter in
+            List(letterList.hiraganaAlphabet) { letter in
                 HStack{
                     Text("\(letter.letterName)")
                         .font(.system(size: 80)).foregroundColor(.brown).bold()
