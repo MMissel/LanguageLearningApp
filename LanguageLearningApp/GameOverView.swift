@@ -8,9 +8,11 @@ struct GameOverView: View {
             Color.yellow.opacity(0.29)
             VStack{
                 Text("Game Over")
-                    .font(.largeTitle)
+                    .font(.largeTitle).foregroundColor(.brown).bold()
+
                     .padding(.top, 80)
-                Text("Score: \(quizScore)/\(Int(maxLetterCount))").padding()
+                Text("Score: \(quizScore)/\(Int(maxLetterCount))").padding().font(.largeTitle).foregroundColor(.brown).bold()
+
                 Spacer()
                 NavigationLink(destination: SettingsView().navigationBarBackButtonHidden(true)){
                     RoundedRectangle(cornerRadius: 10)
@@ -20,7 +22,7 @@ struct GameOverView: View {
                             Text("TRY AGAIN").padding().foregroundColor(.black.opacity(0.6)).font(.system(size: 26)).bold() // Set text color to yellow
                         )
                 }
-                NavigationLink(destination: ScoreView().navigationBarBackButtonHidden(true)){
+                NavigationLink(destination: ScoreView()){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.brown.opacity(0.6)) // Fill the button with brown color
                         .frame(width: 200, height: 60) // Adjusted frame size

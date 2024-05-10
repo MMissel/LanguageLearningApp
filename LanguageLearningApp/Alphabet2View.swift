@@ -1,12 +1,12 @@
 import SwiftUI
 import CoreData
 
-struct AlphabetView: View {
+struct Alphabet2View: View {
     @ObservedObject var letterListModel = letterList()
     
     var body: some View {
         VStack{
-            Text("KATAKANA").foregroundColor(.brown).bold()
+            Text("HIRAGANA").foregroundColor(.brown).bold()
                 .font(.title)
             List(letterList.KatakanaAlphabet) { letter in
                 HStack{
@@ -22,8 +22,8 @@ struct AlphabetView: View {
     }
 }
 
-struct AlphabetView_Previews: PreviewProvider {
+struct Alphabet2View_Previews: PreviewProvider {
     static var previews: some View {
-        AlphabetView()
+        Alphabet2View()
     }
 }
