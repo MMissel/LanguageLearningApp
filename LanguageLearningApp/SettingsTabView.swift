@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsTabView: View {
+    //tab view lets u choose between the 2 quiz alphabet settings
     var body: some View {
         TabView {
             SettingsView().tabItem {

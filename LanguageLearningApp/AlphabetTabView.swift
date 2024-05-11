@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AlphabetTabView: View {
+    //alphabet tab view is simply a view that allows u to select wehether u wanna view katakan alphabet or hiragan alphabet
     var body: some View {
         TabView {
             AlphabetView().tabItem {

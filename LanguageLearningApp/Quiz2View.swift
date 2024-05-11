@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-
+//quiz 2 functions exactly the same as quiz 1 except it uses a different array.
+//other than that it is exactly the same
 
 //This is the page where the gameplay will take place
 struct Quiz2View: View {

@@ -26,11 +26,13 @@ struct Settings2View: View {
 
                 Spacer()
                 Text("Hiragana Quiz").foregroundColor(.brown).font(.system(size: 26)).bold().padding(20)
+                //sets the number of letters for the quiz
                 Text("Number of letters: \(Int(numberOfLetters))").foregroundColor(.brown).font(.system(size: 16))
                 Slider(value: $numberOfLetters, in: 1...46, step: 1)
                     .padding()
                     .accentColor(.brown) // Change the color of the slider's track to brown
                 Spacer()
+                //takes u to the hiragana quiz
                 NavigationLink(destination: Quiz2View().navigationBarBackButtonHidden(true)){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.brown) // Fill the button with brown color
@@ -41,6 +43,7 @@ struct Settings2View: View {
                 }.padding(100)
             }
             .padding()
+            //resets soome data in case ur replaying the game
             .onDisappear{
                 maxLetterCount = numberOfLetters
                 quizScore = 0

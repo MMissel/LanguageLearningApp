@@ -1,12 +1,16 @@
 import SwiftUI
 
 struct GameOverView: View {
+    //letter count key stores the letter count from the quiz
     @AppStorage("LETTER_COUNT_KEY") var maxLetterCount: Double = 0
+    //stores the score
     @AppStorage("SCORE_KEY") var quizScore: Int = 0
     var body: some View {
         ZStack{
             Color.yellow.opacity(0.29)
+            //styling
             VStack{
+                //displays a list of options
                 Text("Game Over")
                     .font(.largeTitle).foregroundColor(.brown).bold()
 

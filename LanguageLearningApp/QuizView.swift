@@ -11,7 +11,7 @@ import SwiftUI
 
 //This is the page where the gameplay will take place
 struct QuizView: View {
-    
+    //stores the current letter feauted on the screen that players need to guess
     @State var currentLetter: String?
     //to store the letters which are going to be the options
     @State var letterOptions: [letter] = []
@@ -23,6 +23,7 @@ struct QuizView: View {
     @State var hasAnswered = false
     //counts which question the player is up to
     @State var questionCounter = 1
+    //debugging value, delete later
     @State var questionCount = 5
     @AppStorage("LETTER_COUNT_KEY") var maxLetterCount: Double = 0
     //allowsus to save score and pass it between pages
@@ -34,8 +35,9 @@ struct QuizView: View {
     
     var body: some View {
         ZStack{
+            //app styling
             Color.yellow.opacity(0.29)
-            //when the final question is reached, we will go to the game over page
+            //when the final question is reached, we will go to the game over page, else we're gonna show the quiz
             if questionCounter == Int(maxLetterCount) + 1 {
                 GameOverView()
             } else{
@@ -53,6 +55,7 @@ struct QuizView: View {
                                 Text("\(questionCounter)/\(Int(maxLetterCount))")
                             }.padding()
                             VStack{
+                                //display score
                                 Text("Score:")
                                 Text("\(quizScore)")
                             }.padding()
@@ -61,25 +64,26 @@ struct QuizView: View {
                     }.padding(50)
                     
                     VStack{
-                        
+                        //current letter is the lettter feature don the screen. we take a copy of the value to use and then if it exists, we're gonna display the image of it
                         if let currentLetterExists = currentLetter {
                             //Text("\(currentLetterExists)")
                             Image(currentLetterExists)
                         }
                         Spacer()
+                        //if the selected letter is correct or incorrect a message will appear ont he screen
                         switch isChosenCorrect {
                         case 1:
                             Text("")
-                                .font(.largeTitle) // Make the text big
-                                .foregroundColor(.green) // Make the text green
+                                .font(.largeTitle) //make the text big
+                                .foregroundColor(.green) //make the text green
                         case 2:
                             Text("correct")
-                                .font(.largeTitle) // Make the text big
-                                .foregroundColor(.green) // Make the text red
+                                .font(.largeTitle) //make the text big
+                                .foregroundColor(.green) //make the text red
                         case 3:
                             Text("Incorrect")
-                                .font(.largeTitle) // Make the text big
-                                .foregroundColor(.red) // Make the text red
+                                .font(.largeTitle) //make the text big
+                                .foregroundColor(.red) //make the text red
                         default:
                             Text("")
                         }
@@ -87,12 +91,19 @@ struct QuizView: View {
                         HStack{
                             //letter option 1
                             if !letterOptions.isEmpty {
+                                //styyling to make the selections look nice
                                 RoundedRectangle(cornerRadius: 10)
                                     .fill(Color.brown) // Fill the button with brown color
                                     .frame(width:150, height: 50) // Adjusted frame size
                                     .overlay(
+                                        //get the data to display in the box
                                         Text("\(letterOptions[0].letterName)").padding().foregroundColor(.black.opacity(0.6)).font(.system(size: 26)).bold() // Set text color to yellow
                                     )
+                                //executes some code when pressed
+                                //will check if the current letter is the same as the selected letter
+                                //changes some values to show correct or incorrect as a result of ur answer
+                                //adds +1 to the score each time the correct asnwer is selected.
+                                //this box and code is repeated 4 more times so no need to comment as the strucuture is complpetely the same
                                     .onTapGesture {
                                         print("Current displayed letter is \(letterListModel.defaultLetter.letterName)")
                                         print("Chosen letter is \(letterOptions[0].letterName)")
@@ -206,8 +217,11 @@ struct QuizView: View {
                         }.padding()
                     }.padding(50)
                         .onAppear{
+                            //when the quiz initially appears we're gonna get a random letter to display on the screen
                             currentLetter = letterListModel.randomLetter().imageName
+                            //were generating a random array of 4 letters
                             letterListModel.randomLetters()
+                            //bringing that array of random letters to use here in the quiz view
                             letterOptions = letterListModel.existingLetters
                             print("on appear code executed")
                         }
@@ -215,10 +229,14 @@ struct QuizView: View {
                     Spacer()
                     if hasAnswered == true {
                         Button(action: {
+                            //displays a correct or incorrect text based on if the answer is right or wrong
                             currentLetter = letterListModel.randomLetter().imageName
+                            //makes random list of letters
                             letterListModel.randomLetters()
+                            //bnrings the random list into the page for use
                             letterOptions = letterListModel.existingLetters
                             print("on appear code executed")
+                            //resets and adds number to the current questions
                             hasAnswered = false
                             isChosenCorrect = 1
                             questionCounter += 1
@@ -230,13 +248,14 @@ struct QuizView: View {
                         .padding(60)
                         
                     }else{
+                        //invisibe to be displayed in themeatnine for apeparance purposes
                         Button(action: {}) {
                             Text("Next")
                                 .font(.system(size: 30)) // Adjust the size to your preference
                                 .foregroundColor(.yellow.opacity(0))
                         }.padding(60)
                     }
-                    
+                    //onn disappear we make an entry into a list containing the player name and the score
                 }.onDisappear{
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "MMMM dd, hh:mm a"// Format for month and day only

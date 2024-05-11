@@ -2,12 +2,14 @@ import SwiftUI
 import CoreData
 
 struct Alphabet2View: View {
+    //creates instance of letterlist() to take its data for use
     @ObservedObject var letterListModel = letterList()
     
     var body: some View {
         VStack{
             Text("HIRAGANA").foregroundColor(.brown).bold()
                 .font(.title)
+            //displayes the hiragana alphabet
             List(letterList.hiraganaAlphabet) { letter in
                 HStack{
                     Text("\(letter.letterName)")

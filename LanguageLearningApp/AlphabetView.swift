@@ -2,12 +2,15 @@ import SwiftUI
 import CoreData
 
 struct AlphabetView: View {
+    //gets the array from the letterlist model by first instantaiting the class
+    //then later we grab the array
     @ObservedObject var letterListModel = letterList()
     
     var body: some View {
         VStack{
             Text("KATAKANA").foregroundColor(.brown).bold()
                 .font(.title)
+            //display the array from letterlistmodel
             List(letterList.KatakanaAlphabet) { letter in
                 HStack{
                     Text("\(letter.letterName)")

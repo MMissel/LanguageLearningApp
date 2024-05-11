@@ -8,7 +8,10 @@
 import Foundation
 
 //this file contains the japanese letters for the Japanese alphabet called "Katakana"
+//this is the meat of the language app
 
+//letter is the basic datatype that we need to play with for the quiz.
+//has image name and letter name that we use to display in the quiz page during the actual gameplay
 struct letter: Identifiable {
     let id = UUID()
     let imageName: String
@@ -25,7 +28,7 @@ class letterList: ObservableObject {
     @Published var existingLetters: [letter] = []
     //keeps the score
     
-    
+    //a list of katakana image file names and their associated letter names in english
     static let KatakanaAlphabet = [
         letter(imageName: "icons8-katakana-a-100", letterName: "a"),
         letter(imageName: "icons8-katakana-e-100", letterName: "e"),
@@ -75,7 +78,7 @@ class letterList: ObservableObject {
         letter(imageName: "icons8-katakana-n-100", letterName: "n")
         
     ]
-    
+    //a list of hiragana image file names and their associated letter names in english
     static let hiraganaAlphabet = [
         letter(imageName: "icons8-hiragana-a-100", letterName: "a"),
         letter(imageName: "icons8-hiragana-e-100", letterName: "e"),
@@ -155,11 +158,14 @@ class letterList: ObservableObject {
                 randomLetters.append(randomLetter)
             }
         }
+        //in case its not empty we want to remove exisitng letters
         existingLetters.removeAll()
         existingLetters += randomLetters //append the randomly generated letters to the existing array
         //add the correct letter answer
         print("Adding letter \(defaultLetter.letterName)")
+        //add it to the environemnt variable so we can pass it on to the view
         existingLetters.append(defaultLetter)
+        //shuffle that baby
         existingLetters.shuffle()
     }
     
@@ -174,6 +180,7 @@ class letterList: ObservableObject {
 //            return false
 //        }
 //    }
+    //this is literally the same function as randomLetter but it uses the hiraganaAlphabet array isntead
     func randomLetter2() -> letter {
         if let newLetter = letterList.hiraganaAlphabet.randomElement(){
             defaultLetter = newLetter
@@ -181,6 +188,7 @@ class letterList: ObservableObject {
         print("New letter displayed on the screen is \(defaultLetter.letterName)")
         return defaultLetter
     }
+    //this is literally the same function as randomLetters but it uses the hiraganaAlphabet array isntead
     func randomLetters2(){
         //temporary array to store the random letters
         var randomLetters: [letter] = []
