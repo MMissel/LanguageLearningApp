@@ -10,7 +10,7 @@ struct MainMenuView: View {
                     .resizable() // Make the image resizable
                     .aspectRatio(contentMode: .fit) // Maintain aspect ratio while fitting the content
                     .frame(width: 200, height: 200) // Set the desired frame size
-                NavigationLink(destination: SettingsView()){
+                NavigationLink(destination: SettingsTabView()){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.brown.opacity(0.6)) // Fill the button with brown color
                         .frame(width: 200, height: 60) // Adjusted frame size
@@ -18,7 +18,7 @@ struct MainMenuView: View {
                             Text("Quiz").padding().foregroundColor(.black.opacity(0.6)).font(.system(size: 26)).bold() // Set text color to yellow
                         )
                 }
-                NavigationLink(destination: AlphabetView()){
+                NavigationLink(destination: AlphabetTabView()){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.brown.opacity(0.6)) // Fill the button with brown color
                         .frame(width: 200, height: 60) // Adjusted frame size
