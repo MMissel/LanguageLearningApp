@@ -23,11 +23,10 @@
 		CEA801D72BEE2A8400A19889 /* AlphabetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D62BEE2A8400A19889 /* AlphabetTabView.swift */; };
 		CEA801D92BEF1BBF00A19889 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D82BEF1BBF00A19889 /* SettingsTabView.swift */; };
 		CEA801DB2BEF1C9300A19889 /* Settings2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801DA2BEF1C9300A19889 /* Settings2View.swift */; };
-		CF4A124F2BF04DFE00416A4C /* UsersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4A124D2BF04DFE00416A4C /* UsersModel.xcdatamodeld */; };
-		CF4A12512BF04F5800416A4C /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12502BF04F5800416A4C /* DataController.swift */; };
 		CF4A12532BF0530100416A4C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12522BF0530100416A4C /* SignUpView.swift */; };
 		CF4A12552BF073DE00416A4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12542BF073DE00416A4C /* LoginView.swift */; };
-		CF4A12572BF0743A00416A4C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12562BF0743A00416A4C /* LoginViewModel.swift */; };
+		CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */; };
+		CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,11 +48,10 @@
 		CEA801D62BEE2A8400A19889 /* AlphabetTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetTabView.swift; sourceTree = "<group>"; };
 		CEA801D82BEF1BBF00A19889 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
 		CEA801DA2BEF1C9300A19889 /* Settings2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings2View.swift; sourceTree = "<group>"; };
-		CF4A124E2BF04DFE00416A4C /* UsersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UsersModel.xcdatamodel; sourceTree = "<group>"; };
-		CF4A12502BF04F5800416A4C /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		CF4A12522BF0530100416A4C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CF4A12542BF073DE00416A4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CF4A12562BF0743A00416A4C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		CF4A125F2BF3302500416A4C /* UserContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */,
-				CF4A12562BF0743A00416A4C /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -146,8 +143,8 @@
 		CF4A124C2BF04DCC00416A4C /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				CF4A124D2BF04DFE00416A4C /* UsersModel.xcdatamodeld */,
-				CF4A12502BF04F5800416A4C /* DataController.swift */,
+				CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */,
+				CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -224,14 +221,14 @@
 			files = (
 				CEA801DB2BEF1C9300A19889 /* Settings2View.swift in Sources */,
 				CEA801D52BEE29B700A19889 /* Alphabet2View.swift in Sources */,
-				CF4A124F2BF04DFE00416A4C /* UsersModel.xcdatamodeld in Sources */,
 				CEA801D12BEE279300A19889 /* Quiz2View.swift in Sources */,
 				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
 				CEA801992BE2503900A19889 /* LetterModel.swift in Sources */,
 				CEA801832BE101B600A19889 /* MainMenuView.swift in Sources */,
-				CF4A12512BF04F5800416A4C /* DataController.swift in Sources */,
+				CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */,
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
+				CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
 				CEA801CF2BEA2E5600A19889 /* ScoreViewModel.swift in Sources */,
 				CF4A12552BF073DE00416A4C /* LoginView.swift in Sources */,
@@ -239,7 +236,6 @@
 				CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */,
 				CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */,
 				CF4A12532BF0530100416A4C /* SignUpView.swift in Sources */,
-				CF4A12572BF0743A00416A4C /* LoginViewModel.swift in Sources */,
 				CEA801D72BEE2A8400A19889 /* AlphabetTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,13 +439,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CF4A124D2BF04DFE00416A4C /* UsersModel.xcdatamodeld */ = {
+		CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CF4A124E2BF04DFE00416A4C /* UsersModel.xcdatamodel */,
+				CF4A125F2BF3302500416A4C /* UserContainer.xcdatamodel */,
 			);
-			currentVersion = CF4A124E2BF04DFE00416A4C /* UsersModel.xcdatamodel */;
-			path = UsersModel.xcdatamodeld;
+			currentVersion = CF4A125F2BF3302500416A4C /* UserContainer.xcdatamodel */;
+			path = UserContainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -8,8 +8,10 @@
 import Foundation
 import CoreData
 
-class DataController: ObservableObject{
-    let container = NSPersistentContainer(name: "UsersModel")
+class RegisterViewModel: ObservableObject{
+    
+    
+    let container = NSPersistentContainer(name: "UserContainer")
     
     init(){
         container.loadPersistentStores{desc, error in
@@ -29,29 +31,29 @@ class DataController: ObservableObject{
     
     // add users
     func addUser(name: String, username: String, password: String, context: NSManagedObjectContext){
-        let user = User(context: context)
-        user.id = UUID()
-        user.name = name
-        user.username = username
-        user.password = password
-        user.score = 0
+        let userEntity = UserEntity(context: context)
+        userEntity.id = UUID()
+        userEntity.name = name
+        userEntity.username = username
+        userEntity.password = password
+        userEntity.score = 0
         save(context: context)
     }
     
-    func updateScore(user: User, score: Int64, context: NSManagedObjectContext){
-        user.score = score
+    func updateScore(userEntity: UserEntity, score: Int64, context: NSManagedObjectContext){
+        userEntity.score = score
         
         save(context: context)
     }
     
     // Fetch user by username and password
-    func fetchUser(username: String, password: String) -> User? {
-            let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+    func fetchUser(username: String, password: String) -> UserEntity? {
+            let fetchRequest: NSFetchRequest<UserEntity> = UserEntity.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "username == %@ AND password == %@", username, password)
             
             do {
-                let users = try container.viewContext.fetch(fetchRequest)
-                return users.first
+                let userEntity = try container.viewContext.fetch(fetchRequest)
+                return userEntity.first
             } catch {
                 print("Error fetching user: \(error)")
                 return nil
