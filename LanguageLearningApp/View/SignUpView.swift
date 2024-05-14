@@ -11,7 +11,7 @@ struct SignUpView: View {
     @Environment (\.dismiss) var dismiss
     
     @Environment(\.managedObjectContext) var managedObjContext
-
+    @ObservedObject var loginViewModel : LoginViewModel
 
     @State var username : String = ""
     @State var password : String = ""
@@ -51,7 +51,8 @@ struct SignUpView: View {
                             //Print
                             print("saved user")
                             RegisterViewModel().addUser(name: name, username: username, password: password, context: managedObjContext)
-                            dismiss()
+//                            dismiss()
+                            loginViewModel.login()
                         }
                         .frame(width: 300, height: 50)
                         .foregroundColor(.black)
@@ -69,5 +70,5 @@ struct SignUpView: View {
 }
 
 #Preview {
-    SignUpView()
+    SignUpView(loginViewModel: LoginViewModel())
 }
