@@ -11,7 +11,7 @@ struct LoginView: View {
     @State var wrongUsername: Float = 0
     @State var wrongPassword: Float = 0
 //    @ObservedObject private var loginViewModel = LoginViewModel()
-    @Binding var isLoggedIn: Bool // Track login status
+//    @Binding var isLoggedIn: Bool // Track login status
     @StateObject var registerViewModel = RegisterViewModel()
     
     @State var username: String = ""
@@ -41,7 +41,7 @@ struct LoginView: View {
 //                        if let user = $registerViewModel.() {
 //                            print("\(user.name ?? "")")
 //                            isLoggedIn = true // Set login status to true
-                        
+                        print("you are logged in")
 //                        } else {
 //                            print("No users found")
 //                            // Set flag for wrong username or password

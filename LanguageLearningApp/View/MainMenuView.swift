@@ -1,11 +1,7 @@
 import SwiftUI
 
 struct MainMenuView: View {
-    @State var isLoggedIn : Bool = false
     var body: some View {
-        if(!isLoggedIn){
-           LoginView(isLoggedIn: $isLoggedIn)
-        }else{
             ZStack{
                 //gives the app its theme
                 Color.yellow.opacity(0.29)
@@ -46,7 +42,7 @@ struct MainMenuView: View {
                 .padding(80)
             }.ignoresSafeArea(.all)
         }
-        }
+        
         
 }
 

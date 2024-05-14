@@ -14,8 +14,8 @@ struct LanguageLearningAppApp: App {
     @StateObject private var registerViewModel = RegisterViewModel()
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
-                MainMenuView()
+            NavigationView {
+                LoginView()
                     .environment(\.managedObjectContext, registerViewModel.container.viewContext)
             }
         }
