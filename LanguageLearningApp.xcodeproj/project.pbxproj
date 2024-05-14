@@ -27,6 +27,7 @@
 		CF4A12552BF073DE00416A4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12542BF073DE00416A4C /* LoginView.swift */; };
 		CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */; };
 		CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */; };
+		CF4A12642BF3853E00416A4C /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12632BF3853E00416A4C /* loginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		CF4A12542BF073DE00416A4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CF4A125F2BF3302500416A4C /* UserContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserContainer.xcdatamodel; sourceTree = "<group>"; };
+		CF4A12632BF3853E00416A4C /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */,
+				CF4A12632BF3853E00416A4C /* loginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				CEA801D92BEF1BBF00A19889 /* SettingsTabView.swift in Sources */,
 				CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */,
 				CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */,
+				CF4A12642BF3853E00416A4C /* loginViewModel.swift in Sources */,
 				CF4A12532BF0530100416A4C /* SignUpView.swift in Sources */,
 				CEA801D72BEE2A8400A19889 /* AlphabetTabView.swift in Sources */,
 			);

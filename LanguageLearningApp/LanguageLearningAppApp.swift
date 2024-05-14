@@ -15,8 +15,9 @@ struct LanguageLearningAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                LoginView()
+                MainMenuView()
                     .environment(\.managedObjectContext, registerViewModel.container.viewContext)
+               
             }
         }
     }
