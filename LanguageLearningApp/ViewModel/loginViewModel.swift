@@ -8,8 +8,8 @@
 import Foundation
 class LoginViewModel : ObservableObject{
     @Published var isLoggedIn: Bool = false
-    
-    func login(){
+    @Published var userLoggedIn: UserEntity = UserEntity()
+    func login(userEntity: UserEntity){
         self.isLoggedIn = true
     }
 }

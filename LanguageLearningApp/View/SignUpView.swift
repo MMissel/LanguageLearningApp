@@ -12,7 +12,7 @@ struct SignUpView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
     @ObservedObject var loginViewModel : LoginViewModel
-
+    
     @State var username : String = ""
     @State var password : String = ""
     @State var name : String = ""

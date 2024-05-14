@@ -36,13 +36,27 @@ struct LoginView: View {
                         .border(Color.red, width: CGFloat(wrongPassword))
                         .background(Color.black.opacity(0.1))
                     
+                    if wrongUsername > 0 || wrongPassword > 0 {
+                        Text("Incorrect username or password")
+                            .foregroundColor(.red)
+                    }
                     Button("Login") {
-                        if let user = registerViewModel.fetchUser(username: username, password: password){
-                            print("\(user.name)")
-                            loginViewModel.login()
-                        }else{
-                            
-                        }
+                        if !username.isEmpty && !password.isEmpty {
+                                if let user = registerViewModel.fetchUser(username: username, password: password) {
+                                    print("\(user.name)")
+                                    loginViewModel.login(userEntity: user)
+                                    wrongUsername = 0
+                                    wrongPassword = 0
+                                } else {
+                                    // Set the state variables to indicate wrong username/password
+                                    wrongUsername = 2
+                                    wrongPassword = 2
+                                }
+                            } else {
+                                // Set the state variables to indicate empty username/password
+                                wrongUsername = 2
+                                wrongPassword = 2
+                            }
                     }
                     .frame(width: 300, height: 50)
                     .foregroundColor(.black)

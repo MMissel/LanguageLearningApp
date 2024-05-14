@@ -28,6 +28,9 @@
 		CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */; };
 		CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */; };
 		CF4A12642BF3853E00416A4C /* loginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12632BF3853E00416A4C /* loginViewModel.swift */; };
+		CF4A12662BF38B6800416A4C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12652BF38B6800416A4C /* SignUpViewModel.swift */; };
+		CF4A12682BF39E9100416A4C /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12672BF39E9100416A4C /* ScoreViewModel.swift */; };
+		CF4A126A2BF3A04200416A4C /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12692BF3A04200416A4C /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		CF4A125F2BF3302500416A4C /* UserContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserContainer.xcdatamodel; sourceTree = "<group>"; };
 		CF4A12632BF3853E00416A4C /* loginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewModel.swift; sourceTree = "<group>"; };
+		CF4A12652BF38B6800416A4C /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		CF4A12672BF39E9100416A4C /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
+		CF4A12692BF3A04200416A4C /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			children = (
 				CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */,
 				CF4A12632BF3853E00416A4C /* loginViewModel.swift */,
+				CF4A12652BF38B6800416A4C /* SignUpViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 			children = (
 				CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */,
 				CF4A125E2BF3302500416A4C /* UserContainer.xcdatamodeld */,
+				CF4A12672BF39E9100416A4C /* ScoreViewModel.swift */,
+				CF4A12692BF3A04200416A4C /* CoreDataManager.swift */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -224,12 +233,15 @@
 			files = (
 				CEA801DB2BEF1C9300A19889 /* Settings2View.swift in Sources */,
 				CEA801D52BEE29B700A19889 /* Alphabet2View.swift in Sources */,
+				CF4A12662BF38B6800416A4C /* SignUpViewModel.swift in Sources */,
 				CEA801D12BEE279300A19889 /* Quiz2View.swift in Sources */,
 				CEA801952BE24B5F00A19889 /* SettingsView.swift in Sources */,
 				CEA801992BE2503900A19889 /* LetterModel.swift in Sources */,
+				CF4A12682BF39E9100416A4C /* ScoreViewModel.swift in Sources */,
 				CEA801832BE101B600A19889 /* MainMenuView.swift in Sources */,
 				CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */,
 				CEA801932BE24A0F00A19889 /* QuizView.swift in Sources */,
+				CF4A126A2BF3A04200416A4C /* CoreDataManager.swift in Sources */,
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
 				CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,

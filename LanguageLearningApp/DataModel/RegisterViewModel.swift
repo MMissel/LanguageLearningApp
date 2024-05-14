@@ -36,15 +36,10 @@ class RegisterViewModel: ObservableObject{
         userEntity.name = name
         userEntity.username = username
         userEntity.password = password
-        userEntity.score = 0
         save(context: context)
     }
     
-    func updateScore(userEntity: UserEntity, score: Int64, context: NSManagedObjectContext){
-        userEntity.score = score
-        
-        save(context: context)
-    }
+
     
     // Fetch user by username and password
     func fetchUser(username: String, password: String) -> UserEntity? {
