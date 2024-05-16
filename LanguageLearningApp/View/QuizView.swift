@@ -29,9 +29,10 @@ struct QuizView: View {
     //allowsus to save score and pass it between pages
     @AppStorage("SCORE_KEY") var quizScore: Int = 0
     //final score
-    @AppStorage("FINAL_SCORE_KEY") var finalScore: String = "0/46"
+//    @AppStorage("FINAL_SCORE_KEY") var finalScore: String = "0/46"
+    @ObservedObject var viewModel = QuizViewModel()
     //create an instance of the viewModel so that we can add the score to the history/leaderboard
-    @ObservedObject var viewModel = LeaderBoardViewModel()
+//    @ObservedObject var viewModel = LeaderBoardViewModel()
     
     var body: some View {
         ZStack{
@@ -263,9 +264,10 @@ struct QuizView: View {
                     let currentDate = Date()
                     let dateString = dateFormatter.string(from: currentDate)
                     //creating a string that will store the Your score/letter count
-                    finalScore = "\(quizScore)/\(Int(maxLetterCount))   \(dateString)"
+//                    finalScore = "\(quizScore)/\(Int(maxLetterCount))   \(dateString)"
+                    viewModel.finalScore = "\(quizScore)/\(Int(maxLetterCount))"
                     //calls a function that adds the score and name to the quiz history page
-                    viewModel.addTuple()
+                    viewModel.addScore()
                 }
                 
             }

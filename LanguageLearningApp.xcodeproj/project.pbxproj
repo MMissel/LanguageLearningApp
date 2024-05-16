@@ -17,12 +17,12 @@
 		CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801962BE24D7400A19889 /* AlphabetView.swift */; };
 		CEA801992BE2503900A19889 /* LetterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801982BE2503900A19889 /* LetterModel.swift */; };
 		CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801CC2BEA1D7100A19889 /* GameOverView.swift */; };
-		CEA801CF2BEA2E5600A19889 /* ScoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */; };
 		CEA801D12BEE279300A19889 /* Quiz2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D02BEE279300A19889 /* Quiz2View.swift */; };
 		CEA801D52BEE29B700A19889 /* Alphabet2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D42BEE29B700A19889 /* Alphabet2View.swift */; };
 		CEA801D72BEE2A8400A19889 /* AlphabetTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D62BEE2A8400A19889 /* AlphabetTabView.swift */; };
 		CEA801D92BEF1BBF00A19889 /* SettingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801D82BEF1BBF00A19889 /* SettingsTabView.swift */; };
 		CEA801DB2BEF1C9300A19889 /* Settings2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801DA2BEF1C9300A19889 /* Settings2View.swift */; };
+		CF29EF8C2BF6208F00A93B5E /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF29EF8B2BF6208F00A93B5E /* QuizViewModel.swift */; };
 		CF4A12532BF0530100416A4C /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12522BF0530100416A4C /* SignUpView.swift */; };
 		CF4A12552BF073DE00416A4C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A12542BF073DE00416A4C /* LoginView.swift */; };
 		CF4A125D2BF32CE400416A4C /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */; };
@@ -46,12 +46,12 @@
 		CEA801982BE2503900A19889 /* LetterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterModel.swift; sourceTree = "<group>"; };
 		CEA8019A2BE2520800A19889 /* o.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = o.png; path = ../../../../../Downloads/o.png; sourceTree = "<group>"; };
 		CEA801CC2BEA1D7100A19889 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
-		CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewModel.swift; sourceTree = "<group>"; };
 		CEA801D02BEE279300A19889 /* Quiz2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz2View.swift; sourceTree = "<group>"; };
 		CEA801D42BEE29B700A19889 /* Alphabet2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alphabet2View.swift; sourceTree = "<group>"; };
 		CEA801D62BEE2A8400A19889 /* AlphabetTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetTabView.swift; sourceTree = "<group>"; };
 		CEA801D82BEF1BBF00A19889 /* SettingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabView.swift; sourceTree = "<group>"; };
 		CEA801DA2BEF1C9300A19889 /* Settings2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings2View.swift; sourceTree = "<group>"; };
+		CF29EF8B2BF6208F00A93B5E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		CF4A12522BF0530100416A4C /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		CF4A12542BF073DE00416A4C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CF4A125C2BF32CE400416A4C /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -123,9 +123,9 @@
 		CF4A12482BF04CC100416A4C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CEA801CE2BEA2E5600A19889 /* ScoreViewModel.swift */,
 				CF4A12632BF3853E00416A4C /* loginViewModel.swift */,
 				CF4A12652BF38B6800416A4C /* SignUpViewModel.swift */,
+				CF29EF8B2BF6208F00A93B5E /* QuizViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,10 +245,10 @@
 				CEA801812BE101B600A19889 /* LanguageLearningAppApp.swift in Sources */,
 				CF4A12602BF3302500416A4C /* UserContainer.xcdatamodeld in Sources */,
 				CEA801912BE2499F00A19889 /* ScoreView.swift in Sources */,
-				CEA801CF2BEA2E5600A19889 /* ScoreViewModel.swift in Sources */,
 				CF4A12552BF073DE00416A4C /* LoginView.swift in Sources */,
 				CEA801D92BEF1BBF00A19889 /* SettingsTabView.swift in Sources */,
 				CEA801CD2BEA1D7100A19889 /* GameOverView.swift in Sources */,
+				CF29EF8C2BF6208F00A93B5E /* QuizViewModel.swift in Sources */,
 				CEA801972BE24D7400A19889 /* AlphabetView.swift in Sources */,
 				CF4A12642BF3853E00416A4C /* loginViewModel.swift in Sources */,
 				CF4A12532BF0530100416A4C /* SignUpView.swift in Sources */,

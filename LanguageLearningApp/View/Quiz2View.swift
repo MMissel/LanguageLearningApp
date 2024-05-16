@@ -31,7 +31,7 @@ struct Quiz2View: View {
     //final score
     @AppStorage("FINAL_SCORE_KEY") var finalScore: String = "0/46"
     //create an instance of the viewModel so that we can add the score to the history/leaderboard
-    @ObservedObject var viewModel = LeaderBoardViewModel()
+//    @ObservedObject var viewModel = LeaderBoardViewModel()
     
     var body: some View {
         ZStack{
@@ -249,7 +249,7 @@ struct Quiz2View: View {
                     //creating a string that will store the Your score/letter count
                     finalScore = "\(quizScore)/\(Int(maxLetterCount))   \(dateString)"
                     //calls a function that adds the score and name to the quiz history page
-                    viewModel.addTuple()
+//                    viewModel.addTuple()
                 }
                 
             }

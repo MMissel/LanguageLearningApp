@@ -29,7 +29,7 @@ class ScoreViewModel: ObservableObject{
     }
     func addScore(){
         let newScore = UserScore(context: manager.context)
-        newScore.score = 10
+        newScore.score = "0/24"
         save()
         
     }

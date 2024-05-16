@@ -51,8 +51,8 @@ struct SignUpView: View {
                             //Print
                             print("saved user")
                             RegisterViewModel().addUser(name: name, username: username, password: password, context: managedObjContext)
-//                            dismiss()
-                            loginViewModel.login()
+                            dismiss()
+//                            loginViewModel.?login()
                         }
                         .frame(width: 300, height: 50)
                         .foregroundColor(.black)
