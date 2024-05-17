@@ -14,10 +14,73 @@
             filePath = "LanguageLearningApp/View/MainMenuView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "MainMenuView"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B525C83F-FB3E-4D1D-B771-3198F2941F8C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LanguageLearningApp/View/QuizView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B525C83F-FB3E-4D1D-B771-3198F2941F8C - 79ea7400b51d44be"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LanguageLearningApp.QuizView.body.getter : some"
+                  moduleName = "LanguageLearningApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aliaghajafari/Desktop/IOS%20Project/LanguageLearningApp/LanguageLearningApp/View/QuizView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "286"
+                  endingLineNumber = "286"
+                  offsetFromSymbolStart = "1872">
+               </Location>
+               <Location
+                  uuid = "B525C83F-FB3E-4D1D-B771-3198F2941F8C - 79ea7400b51d6549"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LanguageLearningApp.QuizView.body.getter : some"
+                  moduleName = "LanguageLearningApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aliaghajafari/Desktop/IOS%20Project/LanguageLearningApp/LanguageLearningApp/View/QuizView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "540">
+               </Location>
+               <Location
+                  uuid = "B525C83F-FB3E-4D1D-B771-3198F2941F8C - b22b5f8e94073e1e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Color, SwiftUI._ConditionalContent&lt;LanguageLearningApp.GameOverView, &lt;&lt;opaque return type of SwiftUI.View.onDisappear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in LanguageLearningApp.QuizView.body.getter : some"
+                  moduleName = "LanguageLearningApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aliaghajafari/Desktop/IOS%20Project/LanguageLearningApp/LanguageLearningApp/View/QuizView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "772">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

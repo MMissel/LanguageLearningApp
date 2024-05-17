@@ -33,14 +33,15 @@ struct QuizView: View {
     @ObservedObject var viewModel = QuizViewModel()
     //create an instance of the viewModel so that we can add the score to the history/leaderboard
 //    @ObservedObject var viewModel = LeaderBoardViewModel()
-    
+    @ObservedObject var loginViewModel : LoginViewModel
     var body: some View {
+
         ZStack{
             //app styling
             Color.yellow.opacity(0.29)
             //when the final question is reached, we will go to the game over page, else we're gonna show the quiz
             if questionCounter == Int(maxLetterCount) + 1 {
-                GameOverView()
+                GameOverView(loginViewModel: loginViewModel)
             } else{
                 VStack{
                     VStack{
@@ -266,8 +267,10 @@ struct QuizView: View {
                     //creating a string that will store the Your score/letter count
 //                    finalScore = "\(quizScore)/\(Int(maxLetterCount))   \(dateString)"
                     viewModel.finalScore = "\(quizScore)/\(Int(maxLetterCount))"
-                    //calls a function that adds the score and name to the quiz history page
-                    viewModel.addScore()
+//                    calls a function that adds the score and name to the // Optional binding to safely unwrap userLoggedIn and access name
+                   
+                    print("this is quiz view \(loginViewModel.userId)")
+                    viewModel.addScore(userId: loginViewModel.userId)
                 }
                 
             }
@@ -281,7 +284,7 @@ struct QuizView: View {
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack{
-            QuizView()
+            QuizView(loginViewModel: LoginViewModel())
         }
     }
 }

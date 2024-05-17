@@ -8,14 +8,16 @@
 import Foundation
 class QuizViewModel: ObservableObject{
     @Published var finalScore : String = "0/45"
-    
-    func addScore(){
+    let scoreModel = ScoreViewModel.instance
+
+    func addScore(userId : UUID){
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM dd, hh:mm a"// Format for month and day only
         
         let currentDate = Date()
         let dateString = dateFormatter.string(from: currentDate)
-        print(dateString);
-        print(finalScore)
+//        print("user logged ins is  \(userEntity)")
+        scoreModel.addScore(score: finalScore, date: currentDate, userId: userId)
+ 
     }
 }

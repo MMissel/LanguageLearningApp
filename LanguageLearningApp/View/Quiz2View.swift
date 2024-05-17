@@ -38,7 +38,7 @@ struct Quiz2View: View {
             Color.yellow.opacity(0.29)
             //when the final question is reached, we will go to the game over page
             if questionCounter == Int(maxLetterCount) + 1 {
-                GameOverView()
+//                GameOverView(loginViewModel: loginViewModel)
             } else{
                 VStack{
                     VStack{

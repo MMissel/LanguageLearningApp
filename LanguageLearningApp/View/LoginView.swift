@@ -44,7 +44,7 @@ struct LoginView: View {
                         if !username.isEmpty && !password.isEmpty {
                                 if let user = registerViewModel.fetchUser(username: username, password: password) {
                                     print("\(user.name)")
-                                    loginViewModel.login(userEntity: user)
+                                    loginViewModel.login(userId: user.id!) // Pass the userId here
                                     wrongUsername = 0
                                     wrongPassword = 0
                                 } else {
