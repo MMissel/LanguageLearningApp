@@ -12,7 +12,7 @@ struct SettingsTabView: View {
                     .foregroundColor(.black) // Set text color to blue
                     .font(.headline) // Set text size to headline
             }
-            Settings2View()
+            Settings2View(loginvm: loginvm)
                 .tabItem {
                     Image(systemName: "number-one")
                     Text("Hiragana")

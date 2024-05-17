@@ -43,7 +43,7 @@ struct MainMenuView: View {
                                 Text("HISTORY").padding().foregroundColor(.black.opacity(0.6)).font(.system(size: 26)).bold() //set text color to yellow
                             )
                     }
-                    Spacer()
+                   
                 }
                 .padding(80)
             }.ignoresSafeArea(.all)
