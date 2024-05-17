@@ -12,7 +12,7 @@ struct SignUpView: View {
     
     @Environment(\.managedObjectContext) var managedObjContext
     @ObservedObject var loginViewModel : LoginViewModel
-
+    
     @State var username : String = ""
     @State var password : String = ""
     @State var name : String = ""
@@ -48,11 +48,14 @@ struct SignUpView: View {
                     
                     
                         Button("Signup") {
-                            //Print
-                            print("saved user")
+                        if !name.isEmpty && !username.isEmpty && !password.isEmpty {
                             RegisterViewModel().addUser(name: name, username: username, password: password, context: managedObjContext)
-//                            dismiss()
-                            loginViewModel.login()
+                            dismiss()
+                        } else {
+                        // Set the state variables to indicate empty fields
+                            WrongUsername = 2
+                            WrongPassword = 2
+                                                    }
                         }
                         .frame(width: 300, height: 50)
                         .foregroundColor(.black)

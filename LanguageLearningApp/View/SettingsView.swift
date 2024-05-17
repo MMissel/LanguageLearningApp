@@ -17,6 +17,7 @@ struct SettingsView: View {
     //so we can set the score to 0 before restarting the quiz
     @AppStorage("SCORE_KEY") var quizScore: Int = 0
     //lets u choose between each alphabet for the quiz
+    @ObservedObject var loginvm : LoginViewModel
     var body: some View {
         ZStack{
             Color.yellow.opacity(0.29)
@@ -33,7 +34,7 @@ struct SettingsView: View {
                     .accentColor(.brown) // Change the color of the slider's track to brown
                 Spacer()
                 //takes use to the katakana quiz page
-                NavigationLink(destination: QuizView().navigationBarBackButtonHidden(true)){
+                NavigationLink(destination: QuizView(loginViewModel: loginvm).navigationBarBackButtonHidden(true)){
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.brown) // Fill the button with brown color
                         .frame(width: 200, height: 60) // Adjusted frame size
@@ -57,7 +58,7 @@ struct SettingsView: View {
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack{
-            SettingsView()
+            SettingsView(loginvm: LoginViewModel())
         }
         
     }

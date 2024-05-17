@@ -2,15 +2,17 @@ import SwiftUI
 
 struct SettingsTabView: View {
     //tab view lets u choose between the 2 quiz alphabet settings
+    @ObservedObject var loginvm : LoginViewModel
     var body: some View {
+    
         TabView {
-            SettingsView().tabItem {
+            SettingsView( loginvm: loginvm).tabItem {
                 Image(systemName: "number-one")
                 Text("Katakana")
                     .foregroundColor(.black) // Set text color to blue
                     .font(.headline) // Set text size to headline
             }
-            Settings2View()
+            Settings2View(loginvm: loginvm)
                 .tabItem {
                     Image(systemName: "number-one")
                     Text("Hiragana")
@@ -26,6 +28,6 @@ struct SettingsTabView: View {
 
 struct SettingsTabView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsTabView()
+        SettingsTabView(loginvm: LoginViewModel())
     }
 }
